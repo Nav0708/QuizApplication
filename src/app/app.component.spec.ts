@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InterviewsetupComponent } from './interviewsetup/interviewsetup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -11,7 +12,10 @@ describe('AppComponent', () => {
         InterviewsetupComponent,
         DashboardComponent
       ],
-      imports: [AppComponent],
+      imports: [
+        FormsModule,
+        ReactiveFormsModule
+      ],
     }).compileComponents();
   });
 
