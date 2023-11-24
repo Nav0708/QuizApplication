@@ -2,12 +2,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { InterviewsetupComponent } from './interviewsetup/interviewsetup.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, HomeModule],
+  declarations: [AppComponent, DashboardComponent,InterviewsetupComponent],
+  imports: [BrowserModule, DashboardModule, FormsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

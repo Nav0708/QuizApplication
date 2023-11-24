@@ -1,0 +1,32 @@
+<!-- interview-setup.component.html -->
+
+<div class="interview-setup-container">
+    <h2>Interview Setup</h2>
+  
+    <div class="form-group">
+      <label for="interviewType">Select Interview Type:</label>
+      <select id="interviewType" [(ngModel)]="selectedInterviewType">
+        <option *ngFor="let type of interviewTypes" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="difficultyLevel">Difficulty Level:</label>
+      <select id="difficultyLevel" [(ngModel)]="selectedDifficultyLevel">
+        <option *ngFor="let level of difficultyLevels" [value]="level">{{ level }}</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="duration">Custom Duration (minutes):</label>
+      <input type="number" id="duration" [(ngModel)]="customParameters.duration" min="1">
+    </div>
+  
+    <div class="form-group">
+      <label for="numberOfQuestions">Custom Number of Questions:</label>
+      <input type="number" id="numberOfQuestions" [(ngModel)]="customParameters.numberOfQuestions" min="1">
+    </div>
+  
+    <button (click)="startInterview()">Start Interview</button>
+  </div>
+  
