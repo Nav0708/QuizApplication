@@ -7,7 +7,7 @@ import { InterviewsetupComponent } from './interviewsetup/interviewsetup.compone
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,DashboardComponent,InterviewsetupComponent],
+  imports: [RouterOutlet,DashboardComponent,InterviewsetupComponent,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
