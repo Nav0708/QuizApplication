@@ -1,8 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-interviewsetup',
+  selector: 'app-interview-setup',
   standalone: true,
+  imports:[CommonModule, FormsModule],
   templateUrl: './interviewsetup.component.html',
   styleUrls: ['./interviewsetup.component.css']
 })
