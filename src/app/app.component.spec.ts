@@ -3,6 +3,8 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InterviewsetupComponent } from './interviewsetup/interviewsetup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InterviewsimulatorComponent } from './interviewsimulator/interviewsimulator.component';
+import { MatCardModule } from '@angular/material/card';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -10,11 +12,13 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         InterviewsetupComponent,
-        DashboardComponent
+        DashboardComponent,
+        InterviewsimulatorComponent
       ],
       imports: [
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatCardModule
       ],
     }).compileComponents();
   });
