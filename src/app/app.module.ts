@@ -11,6 +11,7 @@ import { AppRoutingModule, routes } from './app.routes';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { questionsComponent } from './questions/questions.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { QuestionService } from './questions.service';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent,quizsetupComponent, PageNotFoundComponent,
@@ -21,11 +22,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserModule, 
     DashboardModule,
     AppRoutingModule,
-    HttpClient,
     HttpClientModule,
-    RouterModule.forRoot(routes),
     ],
-   
   bootstrap: [AppComponent],
   
 })

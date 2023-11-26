@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InterviewsetupComponent } from '../interviewsetup/interviewsetup.component';
+import { quizsetupComponent } from '../quizsetup/quizsetup.component';
+import { MatCardModule } from '@angular/material/card';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-  imports: [CommonModule, InterviewsetupComponent]
+  imports: [CommonModule, MatCardModule, quizsetupComponent]
 })
 export class DashboardComponent implements OnInit {
-
   upcomingInterviews: any[] = [];
   performanceHistory: any[] = []; // Replace 'any[]' with the appropriate type for your data model
   recentlyCompletedInterviews: any[] = []; // Replace 'any[]' with the appropriate type for your data model
 
-  constructor() {
-    // Constructor logic (if needed)
-  }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     // You may fetch data from a service or an API here
@@ -28,26 +27,35 @@ export class DashboardComponent implements OnInit {
   }
 
   private getMockInterviewData(): any[] {
-    // Mock data for upcoming interviews
     return [
-      { date: '2023-12-01', time: '10:00 AM', interviewer: 'John Doe' },
-      // Add more interview entries as needed
+      { date: '2023-12-01', time: '10:00 AM', interviewer: 'John Doe', label:'Mock interview', description:'technical' },
     ];
   }
 
   private getMockPerformanceHistoryData(): any[] {
-    // Mock data for performance history
     return [
       { date: '2023-11-15', score: 85 },
-      // Add more performance history entries as needed
     ];
   }
 
   private getMockRecentlyCompletedInterviewsData(): any[] {
-    // Mock data for recently completed interviews
     return [
       { date: '2023-11-28', interviewer: 'Jane Smith', score: 92 },
-      // Add more recently completed interview entries as needed
     ];
   }
+
+  private getInterviewLabel(): any[]{
+    return [
+      { label:'Mock interview' },
+    ];
+  }
+  private getInterviewDescription(): any[]{
+    return [
+      { description:'Technical Mock interview' },
+    ];
+  }
+  navigateToInterviewSetup(): any {
+    this.router.navigate(['/interviewsetup']);
+  }
+
 }

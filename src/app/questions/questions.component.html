@@ -1,0 +1,17 @@
+<div *ngIf="showQuestions" class="questions-container">
+    <h3>Interview Questions</h3>
+     Display each question and provide options 
+     <p>Time remaining: {{ timerValue }}</p>
+     <div *ngFor="let question of interviewQuestions; let i = index" class="question">
+        <p>{{ question.questionText }}</p>    
+        <div class="options">
+            <label *ngFor="let option of question.options; let j = index">
+          <!--<input type="radio" name="question{{ question.number }}" [(ngModel)]="question.selectedAnswer" [value]="option">
+          {{ option }}--->
+        </label>
+      </div>
+    </div>
+    <button (click)="nextQuestion()" [disabled]="currentQuestion === questionList.length -1">Next</button>
+    <button (click)="submitAnswers()">Submit Answers</button>
+  </div>
+  

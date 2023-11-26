@@ -1,3 +1,15 @@
+<div class="welcome">
+  <h1>Test your readiness for the Interview!</h1>
+  <div class="interviews">
+    <mat-card class="interview" *ngFor="let interview of upcomingInterviews">
+      <mat-card-title>{{interview.label}}</mat-card-title>
+      <mat-card-content>{{interview.description}}</mat-card-content>
+      <mat-card-actions>
+        <button (click)="navigateToInterviewSetup()">Start interview</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
 <div class="dashboard-container">
   <div class="section">
     <h2>Upcoming Interviews</h2>
