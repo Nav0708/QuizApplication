@@ -5,17 +5,27 @@ import { MatCardModule } from '@angular/material/card';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { InterviewsetupComponent } from './interviewsetup/interviewsetup.component';
-import { provideRouter } from '@angular/router';
+import { quizsetupComponent } from './quizsetup/quizsetup.component';
+import { RouterModule, provideRouter } from '@angular/router';
 import { AppRoutingModule, routes } from './app.routes';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { InterviewsimulatorComponent } from './interviewsimulator/interviewsimulator.component';
-
-
+import { questionsComponent } from './questions/questions.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent,InterviewsetupComponent, PageNotFoundComponent,InterviewsimulatorComponent],
-  imports: [FormsModule,ReactiveFormsModule,MatCardModule,BrowserModule, DashboardModule, AppRoutingModule],
+  declarations: [AppComponent, DashboardComponent,quizsetupComponent, PageNotFoundComponent,
+    questionsComponent],
+  imports: [FormsModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    BrowserModule, 
+    DashboardModule,
+    AppRoutingModule,
+    HttpClient,
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+    ],
+   
   bootstrap: [AppComponent],
   
 })

@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { InterviewsetupComponent } from './interviewsetup/interviewsetup.component';
-import { InterviewsimulatorComponent } from './interviewsimulator/interviewsimulator.component';
+import { quizsetupComponent } from './quizsetup/quizsetup.component';
+import { questionsComponent } from './questions/questions.component';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +11,9 @@ import { InterviewsimulatorComponent } from './interviewsimulator/interviewsimul
   imports: [
     RouterOutlet,
     DashboardComponent,
-    InterviewsetupComponent,
+    quizsetupComponent,
     RouterOutlet,
-    InterviewsimulatorComponent
+    questionsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
