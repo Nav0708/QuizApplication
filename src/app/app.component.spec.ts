@@ -1,9 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { InterviewsetupComponent } from './interviewsetup/interviewsetup.component';
+import { quizsetupComponent } from './quizsetup/quizsetup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InterviewsimulatorComponent } from './interviewsimulator/interviewsimulator.component';
+import { questionsComponent } from './questions/questions.component';
 import { MatCardModule } from '@angular/material/card';
 
 describe('AppComponent', () => {
@@ -11,9 +11,9 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        InterviewsetupComponent,
+        quizsetupComponent,
         DashboardComponent,
-        InterviewsimulatorComponent
+        questionsComponent
       ],
       imports: [
         FormsModule,
