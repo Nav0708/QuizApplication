@@ -1,27 +1,34 @@
-# ClientApp
+Sure, here's a template for your GitHub README file for the Quiz Application:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+---
 
-## Development server
+# Quiz Application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Quiz Application](demo.gif)
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The Quiz Application is a full-stack online quiz platform built with Angular, ExpressJS, Node.js, HTML/CSS, and MongoDB. It allows users to take quizzes, view their scores, and manage questions and quizzes.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- User authentication and authorization system.
+- Dynamic question rendering.
+- Scoring mechanism with instant feedback.
+- Admin panel for managing questions and quizzes.
+- RESTful APIs for communication between frontend and backend.
+- MongoDB integration for data storage.
 
-## Running unit tests
+## Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular
+- ExpressJS
+- Node.js
+- MongoDB
+- HTML/CSS
+```bash
+cd frontend
+ng serve
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+6. Open your browser and navigate to `http://localhost:4200` to use the application.
