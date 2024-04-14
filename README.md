@@ -1,7 +1,3 @@
-Sure, here's a template for your GitHub README file for the Quiz Application:
-
----
-
 # Quiz Application
 
 ![Quiz Application](demo.gif)
