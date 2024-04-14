@@ -26,9 +26,3 @@ The Quiz Application is a full-stack online quiz platform built with Angular, Ex
 - Node.js
 - MongoDB
 - HTML/CSS
-```bash
-cd frontend
-ng serve
-```
-
-6. Open your browser and navigate to `http://localhost:4200` to use the application.
